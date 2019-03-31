@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -81,5 +80,5 @@ func handlePost(r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(event.Entry[0].Envelope[0].Message.Text)
+	log.Println(event.Entry[0].Envelope[0].Message.Text)
 }
