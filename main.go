@@ -54,6 +54,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleGet(w http.ResponseWriter, r *http.Request) {
+	log.Println("getting it")
 	verifyToken := "mooz_is_cool"
 	query := r.URL.Query()
 	token := query.Get("hub.verify_token")
