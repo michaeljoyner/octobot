@@ -64,7 +64,7 @@ func handleGet(w http.ResponseWriter, r *http.Request) {
 	if mode == "subscribe" && token == verifyToken {
 		w.Write([]byte(challenge))
 	} else {
-		fmt.Println("you are forbidden")
+		http.Error(w, "forbidden", http.StatusForbidden)
 	}
 }
 
