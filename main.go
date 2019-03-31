@@ -64,7 +64,7 @@ func handleGet(w http.ResponseWriter, r *http.Request) {
 	if mode == "subscribe" && token == verifyToken {
 		w.Write([]byte(challenge))
 	} else {
-		http.Error(w, "forbidden", http.StatusForbidden)
+		http.Error(w, "thou shalt not pass", http.StatusForbidden)
 	}
 }
 
